@@ -1,0 +1,44 @@
+Table,Field,Unit,Purpose
+Dangote_Refinery_Financials,Period,Date,Trend analysis
+Dangote_Refinery_Financials,Revenue,USD / NGN,Top-line performance
+Dangote_Refinery_Financials,EBITDA,USD / NGN,Operating profitability
+Dangote_Refinery_Financials,EBIT,USD / NGN,Operating profit
+Dangote_Refinery_Financials,Net_Income,USD / NGN,Earnings
+Dangote_Refinery_Financials,Operating_Cash_Flow,USD / NGN,Cash generation
+Dangote_Refinery_Financials,Capex,USD / NGN,Capital intensity
+Dangote_Refinery_Financials,Free_Cash_Flow,USD / NGN,Valuation input
+Dangote_Refinery_BalanceSheet,Total_Assets,USD / NGN,Capital base
+Dangote_Refinery_BalanceSheet,Debt,USD / NGN,Leverage
+Dangote_Refinery_BalanceSheet,Cash,USD / NGN,Net debt
+Dangote_Refinery_Operations,Capacity,bpd,Installed capacity
+Dangote_Refinery_Operations,Throughput,bpd,Actual processing
+Dangote_Refinery_Operations,Utilisation,%,Operational efficiency
+Dangote_Refinery_Operations,Gross_Refining_Margin,USD/bbl,Core refinery economics
+Dangote_Refinery_Operations,Crude_Input,bpd,Feedstock
+Dangote_Refinery_Operations,Product_Output,bpd / tonnes,Product mix
+Global_Peers,Company,Text,Peer identity
+Global_Peers,Market_Cap,USD bn,Equity valuation
+Global_Peers,Enterprise_Value,USD bn,Capital structure-adjusted valuation
+Global_Peers,Revenue,USD bn,Scale
+Global_Peers,EBITDA,USD bn,Operating earnings
+Global_Peers,Net_Income,USD bn,Earnings
+Global_Peers,Refining_Capacity,bpd,Capacity benchmark
+Global_Peers,Throughput,bpd,Actual processing
+Global_Peers,Utilisation,%,Efficiency
+Global_Peers,Refining_Margin,USD/bbl,Refining economics
+Global_Peers,P/E,x,Valuation
+Global_Peers,EV_EBITDA,x,Valuation
+Global_Peers,EV_per_1000bpd,USD m,Capacity valuation
+Dangote_Group_History,Company,Text,Cement/Sugar/NASCON
+Dangote_Group_History,Year,Year,Historical trend
+Dangote_Group_History,Revenue,NGN,Scale
+Dangote_Group_History,EBITDA,NGN,Profitability
+Dangote_Group_History,PAT,NGN,Earnings
+Dangote_Group_History,Capex,NGN,Investment intensity
+Dangote_Group_History,Dividend,NGN/share,Shareholder returns
+Commodity_Macro,Date,Date,Time series
+Commodity_Macro,Brent,USD/bbl,Crude benchmark
+Commodity_Macro,Gasoline_Crack,USD/bbl,Refining margin driver
+Commodity_Macro,Diesel_Crack,USD/bbl,Refining margin driver
+Commodity_Macro,Jet_Crack,USD/bbl,Refining margin driver
+Commodity_Macro,USD_NGN,NGN/USD,FX sensitivity
