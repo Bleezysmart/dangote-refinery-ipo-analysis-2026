@@ -1,6 +1,7 @@
 -- Dangote Refinery IPO Investment Analysis
 -- PostgreSQL star-schema database
 -- Public-facing naming: clear table and column names, minimal abbreviations.
+-- Schema aligned with the live PostgreSQL database used for this project.
 
 CREATE SCHEMA IF NOT EXISTS dangote_ipo;
 
@@ -9,7 +10,7 @@ CREATE TABLE IF NOT EXISTS dangote_ipo.companies (
     company_name VARCHAR(150) NOT NULL UNIQUE,
     company_type VARCHAR(50) NOT NULL,
     country VARCHAR(100),
-    peer_group VARCHAR(50),
+    comparison_group VARCHAR(50),
     is_dangote BOOLEAN NOT NULL DEFAULT FALSE
 );
 
@@ -131,6 +132,16 @@ CREATE TABLE IF NOT EXISTS dangote_ipo.investment_risks (
     dashboard_message TEXT
 );
 
+-- Benchmark table used for the global refining-peer comparison.
+CREATE TABLE IF NOT EXISTS dangote_ipo.peer_benchmarks (
+    peer_benchmark_id SERIAL PRIMARY KEY,
+    company_id INT NOT NULL REFERENCES dangote_ipo.companies(company_id),
+    period_id INT NOT NULL REFERENCES dangote_ipo.time_periods(period_id),
+    utilisation_pct NUMERIC(8,2),
+    refining_margin_usd_per_bbl NUMERIC(10,2),
+    UNIQUE(company_id, period_id)
+);
+
 CREATE INDEX IF NOT EXISTS idx_financial_company_period
 ON dangote_ipo.financial_performance(company_id, period_id);
 
@@ -145,3 +156,6 @@ ON dangote_ipo.company_valuation(company_id, period_id);
 
 CREATE INDEX IF NOT EXISTS idx_expansion_company_period
 ON dangote_ipo.expansion_and_funding(company_id, period_id);
+
+CREATE INDEX IF NOT EXISTS idx_peer_benchmarks_company_period
+ON dangote_ipo.peer_benchmarks(company_id, period_id);
