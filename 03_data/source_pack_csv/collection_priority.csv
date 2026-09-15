@@ -1,0 +1,9 @@
+Priority,Dataset,Use
+P0,Dangote IPO/prospectus,"Offer terms, historical financials, operations, risks, ownership, use of proceeds"
+P0,Global peer annual reports,"Capacity, throughput, margins, EBITDA, debt, valuation inputs"
+P0,Commodity/refining data,"Brent, cracks, refining margins, FX"
+P1,Dangote Cement,Execution/shareholder-return track record
+P1,Dangote Sugar,Execution/shareholder-return track record
+P1,NASCON,Execution/shareholder-return track record
+P1,Tüpraş/Reliance,Non-US refinery peer benchmarks
+P2,ExxonMobil,Integrated-refiner context; not a direct valuation peer
