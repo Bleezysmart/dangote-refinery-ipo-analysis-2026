@@ -1,0 +1,8 @@
+Benchmark,2024,2025,2026/latest,Unit,Use,Source
+Dangote GRM,10.7,13.7,24.5,$/bbl,Company-specific margin; normalize sustainability,IPO prospectus
+Marathon R&M margin,16.01,16.87,,$/bbl,Pure-ish refining benchmark,Marathon 2025 annual report / SEC
+Tüpraş NRM,,7,,$/bbl,Mediterranean refining benchmark,Tüpraş 2025 IR
+Med FCC benchmark,3.8,6.5,,$/bbl,External benchmark; not directly comparable to Dangote GRM,HELLENiQ Energy / LSEG
+Med diesel crack,19,21.8,,$/bbl,Product crack benchmark,HELLENiQ Energy / LSEG
+Med gasoline crack,14.2,14.6,,$/bbl,Product crack benchmark,HELLENiQ Energy / LSEG
+US 3-2-1 crack,,,~1.55,$/gal peak 2026,Current geopolitical benchmark; not a full-year average,EIA Aug 2026 STEO
