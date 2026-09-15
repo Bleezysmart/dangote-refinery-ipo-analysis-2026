@@ -2,7 +2,7 @@
 
 **Investment Research, Financial Modelling, Valuation & Power BI Dashboard**
 
-A portfolio project examining the proposed Dangote Petroleum Refinery & Petrochemicals IPO at **₦525 per share**, using reported financial and operating data through **H1 2026**.
+A portfolio project examining the Dangote Petroleum Refinery & Petrochemicals IPO at **₦525 per share**, using reported financial and operating data through **H1 2026**.
 
 ## Research question
 
@@ -19,7 +19,7 @@ The analysis does not attempt to prove that the IPO is attractive or unattractiv
 | Business value | ~$49.22B |
 | Revenue | $13.91B |
 | Net profit | $1.82B |
-| EBITDA / operating earnings | ~$2.60B |
+| Analytical EBITDA / operating earnings | ~$2.60B |
 | Refinery utilization | 83.6% |
 | Refining margin | $24.50/bbl |
 | Net debt | $1.40B |
@@ -38,6 +38,8 @@ A **10× EV/EBITDA** multiple is used as an explicit analyst assumption, not as 
 
 Annualized H1 2026 figures are a **run-rate, not a forecast**.
 
+The PostgreSQL financial table does not store EBITDA as a reported field. The project therefore distinguishes the analytical/reconstructed EBITDA used in the valuation framework from the reported operating-profit field stored in the database.
+
 ## What the project demonstrates
 
 - PostgreSQL star-schema data modelling
@@ -52,25 +54,34 @@ Annualized H1 2026 figures are a **run-rate, not a forecast**.
 
 ## Data-quality note
 
-The original product-sales workbook omitted three H1 2026 revenue lines: **CBFS, LPG and Propane**. These were reconciled to the reported H1 2026 revenue total and incorporated into the project data model. The earlier workbook discrepancy and the reconciliation of H1 2026 cash-flow figures are documented in the research report.
+The original product-sales workbook omitted three H1 2026 revenue lines: **CBFS, LPG and Propane**. These were reconciled to the reported H1 2026 revenue total and incorporated into the corrected analytical workbook and project datasets. The original workbook is retained for data lineage, while `Dangote_IPO_Data_Collection_FINAL.xlsx` is the corrected workbook.
+
+A separate H1 2026 cash-flow reconciliation issue is documented in the research report rather than silently replacing one reported figure with another.
 
 ## Project structure
 
 ```text
 01_dashboard/
   ├── Dashboard PDF
-  └── Dashboard preview
+  └── README.md
 
 02_research/
   ├── Full research report
-  └── Investor snapshot
+  ├── Investor snapshot
+  └── README.md
 
 03_data/
-  ├── Corrected data workbook
-  └── Source pack
+  ├── Dangote_IPO_Data_Collection_v2.xlsx       # original collection workbook
+  ├── Dangote_IPO_Data_Collection_FINAL.xlsx    # corrected workbook
+  ├── Analytical CSV datasets
+  ├── Source-pack CSVs
+  └── README.md
 
 04_database/
-  └── PostgreSQL star-schema SQL
+  ├── PostgreSQL schema
+  ├── Six analytical SQL queries
+  ├── Database README
+  └── Data dictionary
 ```
 
 ## Dashboard pages
